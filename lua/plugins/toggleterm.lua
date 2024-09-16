@@ -19,6 +19,6 @@ return {
 
 		vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
 
-		vim.keymap.set("n", "<leader>tt", toggleterm.toggle, { noremap = true })
+		vim.keymap.set("n", "<leader>tt", toggleterm.toggle, { noremap = true, desc = "Toggle terminal" })
 	end,
 }
