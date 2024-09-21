@@ -93,14 +93,18 @@ return {
 				lspconfig["emmet_ls"].setup({
 					capabilities = capabilities,
 					filetypes = {
-						"html",
-						"typescriptreact",
-						"javascriptreact",
 						"css",
+						"eruby",
+						"html",
+						"javascript",
+						"javascriptreact",
+						"less",
 						"sass",
 						"scss",
-						"less",
 						"svelte",
+						"pug",
+						"typescriptreact",
+						"vue",
 					},
 				})
 			end,

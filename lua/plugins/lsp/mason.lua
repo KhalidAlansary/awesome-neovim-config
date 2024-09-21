@@ -14,9 +14,21 @@ return {
 		},
 	},
 	config = function(_, opts)
-		local mason = require("mason")
+		require("mason").setup(opts)
 
 		require("mason-lspconfig").setup({
+			ensure_installed = {
+				"ts_ls",
+				"html",
+				"cssls",
+				"tailwindcss",
+				"svelte",
+				"lua_ls",
+				-- "graphql",
+				"emmet_ls",
+				-- "prismals",
+				"pyright",
+			},
 			automatic_installation = true,
 		})
 
@@ -29,9 +41,8 @@ return {
 				"pylint",
 				"eslint_d",
 			},
+			automatic_installation = true,
 		})
-
-		mason.setup(opts)
 	end,
 
 	vim.keymap.set("n", "<leader>ms", vim.cmd.Mason, { desc = "Open Mason UI" }),
