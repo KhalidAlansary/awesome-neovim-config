@@ -4,6 +4,11 @@ return {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
 		"mxsdev/nvim-dap-vscode-js",
+		{
+			"microsoft/vscode-js-debug",
+			opt = {},
+			build = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out",
+		},
 		"mfussenegger/nvim-dap-python",
 	},
 	config = function()
