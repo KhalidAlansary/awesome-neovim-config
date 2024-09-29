@@ -1,5 +1,6 @@
 return {
 	"stevearc/overseer.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"akinsho/toggleterm.nvim",
 		"nvim-lualine/lualine.nvim",
