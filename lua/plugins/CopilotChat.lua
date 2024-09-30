@@ -5,9 +5,24 @@ return {
 		"github/copilot.vim",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim",
+		"hrsh7th/nvim-cmp",
 	},
 	build = "make tiktoken",
-	opts = {},
+	opts = {
+		mappings = {
+			complete = {
+				insert = "",
+			},
+			reset = {
+				normal = "<C-x>",
+				insert = "<C-x>",
+			},
+			accept_diff = {
+				normal = "<C-a>",
+				insert = "<C-a>",
+			},
+		},
+	},
 	keys = {
 		{
 			"<leader>ccq",
@@ -48,4 +63,8 @@ return {
 			desc = "Toggle chat window",
 		},
 	},
+	config = function(_, opts)
+		require("CopilotChat").setup(opts)
+		require("CopilotChat.integrations.cmp").setup()
+	end,
 }
