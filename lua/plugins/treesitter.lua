@@ -8,6 +8,7 @@ return {
 	opts = {
 		highlight = {
 			enable = true,
+			disable = { "csv", "tsv" },
 		},
 		indent = {
 			enable = true,
