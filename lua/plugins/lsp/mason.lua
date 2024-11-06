@@ -40,6 +40,7 @@ return {
 				"black",
 				"pylint",
 				"eslint_d",
+				"clang-format",
 			},
 			automatic_installation = true,
 		})
