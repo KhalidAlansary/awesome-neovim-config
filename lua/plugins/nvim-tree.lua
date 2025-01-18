@@ -43,5 +43,10 @@ return {
 		)
 		vim.keymap.set("n", "<leader>ec", vim.cmd.NvimTreeCollapse, { desc = "Collapse file explorer" })
 		vim.keymap.set("n", "<leader>er", vim.cmd.NvimTreeRefresh, { desc = "Refresh file explorer" })
+
+		vim.keymap.set("n", "<leader>eo", function()
+			vim.cmd.NvimTreeOpen()
+			vim.cmd.only()
+		end, { desc = "Open file explorer in full screen" })
 	end,
 }
