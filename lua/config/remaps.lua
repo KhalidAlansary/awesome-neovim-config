@@ -36,3 +36,6 @@ end)
 vim.keymap.set("n", "<C-l>", function()
 	vim.cmd.wincmd("l")
 end)
+
+-- Make <C-]> work as expected with programmer dvorak layout
+vim.api.nvim_set_keymap("n", "<char-30>", "<C-]>", {})
