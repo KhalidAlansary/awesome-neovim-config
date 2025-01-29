@@ -36,7 +36,3 @@ vim.api.nvim_create_autocmd({ "TextChanged", "TextChangedI" }, {
 	callback = check_file_changed,
 	group = vim.api.nvim_create_augroup("CheckIfModified", { clear = true }),
 })
-
--- NOTE: Delete if not using github copilot
-vim.keymap.set("n", "<leader>cpe", ":Copilot enable<CR>", { desc = "Enable Copilot" })
-vim.keymap.set("n", "<leader>cpd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
