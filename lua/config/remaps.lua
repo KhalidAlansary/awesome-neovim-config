@@ -41,5 +41,5 @@ end)
 vim.keymap.set("n", "<leader>cpe", ":Copilot enable<CR>", { desc = "Enable Copilot" })
 vim.keymap.set("n", "<leader>cpd", ":Copilot disable<CR>", { desc = "Disable Copilot" })
 
--- Make <C-]> work as expected with programmer dvorak layout
-vim.api.nvim_set_keymap("n", "<char-30>", "<C-]>", {})
+-- Make <C-]> work as expected with programmer dvorak layout on Windows
+-- vim.api.nvim_set_keymap("n", "<char-30>", "<C-]>", {})
