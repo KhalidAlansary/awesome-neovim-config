@@ -5,7 +5,6 @@ return {
 		"github/copilot.vim",
 		"nvim-lua/plenary.nvim",
 		"nvim-telescope/telescope.nvim",
-		"hrsh7th/nvim-cmp",
 	},
 	build = "make tiktoken",
 	opts = {
@@ -65,6 +64,5 @@ return {
 	},
 	config = function(_, opts)
 		require("CopilotChat").setup(opts)
-		-- require("CopilotChat.integrations.cmp").setup()
 	end,
 }
