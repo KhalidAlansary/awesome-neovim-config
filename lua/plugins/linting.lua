@@ -18,7 +18,20 @@ return {
 		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
 			group = lint_augroup,
 			callback = function()
-				lint.try_lint()
+				local ft = vim.bo.filetype
+				if
+					(
+						ft == "javascript"
+						or ft == "typescript"
+						or ft == "javascriptreact"
+						or ft == "typescriptreact"
+						or ft == "svelte"
+					) and vim.fn.glob(".eslintrc*") ~= ""
+				then
+					lint.try_lint()
+				elseif ft == "python" then
+					lint.try_lint()
+				end
 			end,
 		})
 
