@@ -21,6 +21,7 @@ return {
 				insert = "<C-a>",
 			},
 		},
+		model = "claude-3.7-sonnet-thought",
 	},
 	keys = {
 		{
@@ -32,15 +33,6 @@ return {
 				end
 			end,
 			desc = "CopilotChat - Quick chat",
-		},
-		-- Show help actions with telescope
-		{
-			"<leader>cch",
-			function()
-				local actions = require("CopilotChat.actions")
-				require("CopilotChat.integrations.telescope").pick(actions.help_actions())
-			end,
-			desc = "CopilotChat - Help actions",
 		},
 		-- Show prompts actions with telescope
 		{
